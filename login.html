@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monolithic Pictures – Login</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, Arial, sans-serif;
+      background: #0a0e1a;
+      color: #e2e8f0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .login-box {
+      background: #0f172a;
+      padding: 48px 40px 40px;
+      border-radius: 20px;
+      width: 100%;
+      max-width: 420px;
+      border: 1px solid #1e293b;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+    }
+
+    .logo {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+
+    .logo img {
+      width: 120px;
+      height: auto;
+      display: block;
+      margin: 0 auto 20px;
+    }
+
+    .logo h1 {
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      color: #ffffff;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+
+    .logo .pictures {
+      font-size: 15px;
+      letter-spacing: 4px;
+      color: #ffffff;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .logo .subtitle {
+      font-size: 15px;
+      color: #94a3b8;
+      font-weight: 400;
+    }
+
+    .form-group {
+      margin-bottom: 22px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 14px;
+      color: #cbd5e1;
+      font-weight: 500;
+    }
+
+    input {
+      width: 100%;
+      padding: 14px 16px;
+      border-radius: 10px;
+      border: 1px solid #334155;
+      background: #0f172a;
+      color: #f1f5f9;
+      font-size: 15px;
+      transition: border-color 0.2s;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #3b82f6;
+    }
+
+    button {
+      width: 100%;
+      padding: 15px;
+      background: #2563eb;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 8px;
+      transition: background 0.2s;
+    }
+
+    button:hover {
+      background: #1d4ed8;
+    }
+
+    .footer-link {
+      text-align: center;
+      margin-top: 28px;
+      font-size: 14px;
+      color: #94a3b8;
+    }
+
+    .footer-link a {
+      color: #3b82f6;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .footer-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <div class="logo">
+      <img src="/logo.png" alt="Monolithic Pictures">
+      <h1>MONOLITHIC</h1>
+      <div class="pictures">PICTURES</div>
+      <div class="subtitle">A Day to Forget</div>
+    </div>
+
+    <form action="/login" method="POST">
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" name="username" required value="beautynewnew6@gmail.com">
+      </div>
+
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" name="password" required placeholder="Enter your password">
+      </div>
+
+      <button type="submit">Login</button>
+    </form>
+
+    <div class="footer-link">
+      Don’t have an account? <a href="/register">Create Account</a>
+    </div>
+  </div>
+</body>
+</html>
