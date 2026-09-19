@@ -1,94 +1,155 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Monolith Pictures – Login</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Monolithic Pictures – Login</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background: #0f172a;
+      font-family: 'Segoe UI', system-ui, -apple-system, Arial, sans-serif;
+      background: #0a0e1a;
       color: #e2e8f0;
-      height: 100vh;
+      min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
+      padding: 16px;
     }
+
     .login-box {
-      background: #1e293b;
-      padding: 40px;
-      border-radius: 16px;
+      background: #0f172a;
+      padding: 40px 28px;
+      border-radius: 20px;
       width: 100%;
       max-width: 420px;
-      border: 1px solid #334155;
+      border: 1px solid #1e293b;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
     }
+
     .logo {
       text-align: center;
-      margin-bottom: 30px;
+      margin-bottom: 32px;
     }
+
+    .logo img {
+      width: 110px;
+      height: auto;
+      display: block;
+      margin: 0 auto 18px;
+    }
+
     .logo h1 {
-      font-size: 22px;
-      color: #60a5fa;
+      font-size: 24px;
       font-weight: 700;
+      letter-spacing: 1.5px;
+      color: #ffffff;
+      text-transform: uppercase;
+      margin-bottom: 2px;
     }
-    .logo p {
-      color: #e2e8f0;
+
+    .logo .pictures {
+      font-size: 14px;
+      letter-spacing: 4px;
+      color: #ffffff;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .logo .subtitle {
       font-size: 15px;
-      margin-top: 6px;
+      color: #94a3b8;
+      font-weight: 400;
     }
+
     .form-group {
       margin-bottom: 20px;
     }
+
     label {
       display: block;
       margin-bottom: 8px;
       font-size: 14px;
-      color: #94a3b8;
+      color: #cbd5e1;
+      font-weight: 500;
     }
+
     input {
       width: 100%;
-      padding: 14px;
-      border-radius: 8px;
+      padding: 14px 16px;
+      border-radius: 10px;
       border: 1px solid #334155;
       background: #0f172a;
-      color: white;
-      font-size: 15px;
+      color: #f1f5f9;
+      font-size: 16px; /* Important: prevents zoom on iPhone */
     }
+
     input:focus {
       outline: none;
       border-color: #3b82f6;
     }
+
     button {
       width: 100%;
-      padding: 14px;
-      background: #3b82f6;
+      padding: 15px;
+      background: #2563eb;
       color: white;
       border: none;
-      border-radius: 8px;
+      border-radius: 10px;
       font-size: 16px;
       font-weight: 600;
       cursor: pointer;
-      margin-top: 10px;
+      margin-top: 8px;
+      transition: background 0.2s;
     }
+
     button:hover {
-      background: #2563eb;
+      background: #1d4ed8;
     }
-    .link {
+
+    .footer-link {
       text-align: center;
-      margin-top: 22px;
+      margin-top: 26px;
       font-size: 14px;
       color: #94a3b8;
     }
-    .link a {
-      color: #60a5fa;
+
+    .footer-link a {
+      color: #3b82f6;
       text-decoration: none;
+      font-weight: 500;
+    }
+
+    .footer-link a:hover {
+      text-decoration: underline;
+    }
+
+    /* Extra mobile polish */
+    @media (max-width: 480px) {
+      .login-box {
+        padding: 32px 20px;
+      }
+      .logo h1 {
+        font-size: 22px;
+      }
+      .logo img {
+        width: 95px;
+      }
     }
   </style>
 </head>
 <body>
   <div class="login-box">
     <div class="logo">
-      <h1>Monolith Pictures</h1>
-      <p>A Day to Forget</p>
+      <img src="/logo.png" alt="Monolithic Pictures">
+      <h1>MONOLITHIC</h1>
+      <div class="pictures">PICTURES</div>
+      <div class="subtitle">A Day to Forget</div>
     </div>
 
     <form action="/login" method="POST">
@@ -96,16 +157,17 @@
         <label>Email Address</label>
         <input type="email" name="username" required placeholder="Enter your email">
       </div>
+
       <div class="form-group">
         <label>Password</label>
         <input type="password" name="password" required placeholder="Enter your password">
       </div>
+
       <button type="submit">Login</button>
     </form>
 
-    <div class="link">
-      Don’t have an account? <a href="/register">Create Account</a><br><br>
-      <a href="/about">About the Project</a>
+    <div class="footer-link">
+      Don’t have an account? <a href="/register">Create Account</a>
     </div>
   </div>
 </body>
